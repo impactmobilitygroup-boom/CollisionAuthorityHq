@@ -385,6 +385,24 @@
       timestamp: new Date().toISOString()
     };
     console.log('CAHQ Los Angeles Submission:', submission);
+
+    // Submit to Tally
+    const tallyData = new FormData();
+    tallyData.append('zip', zip);
+    tallyData.append('email', email);
+    tallyData.append('intent', intent);
+    tallyData.append('accident_last_12mo', accident);
+    tallyData.append('market', submission.market);
+    tallyData.append('source', submission.source);
+    tallyData.append('timestamp', submission.timestamp);
+
+    fetch('https://tally.so/r/818WGl', {
+      method: 'POST',
+      body: tallyData
+    }).catch(function(err) {
+      console.log('Tally post error:', err);
+    });
+
     if (intent === 'verified_shop') {
       successMsg.textContent = "We'll notify you the moment verified shops are live in your Los Angeles area. You'll know before your insurance company ever gets a chance to steer you.";
       successIntentTag.textContent = 'LA County Shop Finder — Early Access';
