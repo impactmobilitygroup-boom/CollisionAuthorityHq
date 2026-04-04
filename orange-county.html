@@ -200,7 +200,10 @@
     <div class="form-headline">What Brings You Here?</div>
     <p class="form-subline">Tell us what matters most to you. We'll make sure you're first notified for what you actually need — by zip code, right here in Orange County.</p>
     <div id="formContainer">
-      <form id="waitlistForm">
+      <form id="waitlistForm" name="cahq-waitlist-orange_county" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="cahq-waitlist-orange_county">
+        <input type="hidden" name="market" value="orange_county">
+        <p style="display:none"><input name="bot-field"></p>
         <div class="intent-section">
           <span class="intent-label">I'm most interested in —</span>
           <div class="intent-toggle">
@@ -371,39 +374,48 @@
     const email = document.getElementById('email').value.trim();
     const intentEl = document.querySelector('input[name="intent"]:checked');
     const accidentEl = document.querySelector('input[name="accident"]:checked');
+
     if (!zip || !email || !intentEl) {
       if (!intentEl) document.querySelector('.intent-toggle').style.outline = '1px solid var(--red)';
       return;
     }
-    const intent = intentEl.value;
-    const accident = accidentEl ? accidentEl.value : 'not answered';
-    const submission = {
-      market: 'orange_county',
-      zip, email, intent,
-      accident_last_12mo: accident,
-      source: document.referrer || 'direct',
-      timestamp: new Date().toISOString()
-    };
-    console.log('CAHQ Orange County Submission:', submission);
 
-    // Submit to Tally
-    const tallyData = new FormData();
-    tallyData.append('zip', zip);
-    tallyData.append('email', email);
-    tallyData.append('intent', intent);
-    tallyData.append('accident_last_12mo', accident);
-    tallyData.append('market', submission.market);
-    tallyData.append('source', submission.source);
-    tallyData.append('timestamp', submission.timestamp);
+    const intent = intentEl.value === 'verified_shop' ? 'Finding a verified OC shop' : 'Deductible protection';
+    const accident = accidentEl ? (accidentEl.value === 'yes' ? 'Yes' : 'No') : 'Not answered';
 
-    fetch('https://tally.so/r/818WGl', {
-      method: 'POST',
-      body: tallyData
-    }).catch(function(err) {
-      console.log('Tally post error:', err);
+    // Build Tally form URL with prefilled data
+    const tallyBase = 'https://tally.so/r/818WGl';
+    const params = new URLSearchParams({
+      'Zip Code': zip,
+      'Email': email,
+      'What are you most interested in': intent,
+      'Been in accident last 12 months': accident,
     });
 
-    if (intent === 'verified_shop') {
+    // Submit silently to Tally via hidden iframe
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = tallyBase + '?' + params.toString();
+    document.body.appendChild(iframe);
+    setTimeout(function() { document.body.removeChild(iframe); }, 5000);
+
+    // Also send as JSON
+    fetch('https://tally.so/r/818WGl', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        'Zip Code': zip,
+        'Email': email,
+        'What are you most interested in': intent,
+        'Been in accident last 12 months': accident,
+        'market': 'orange_county',
+        'source': document.referrer || 'direct',
+        'timestamp': new Date().toISOString()
+      })
+    }).catch(function(){});
+
+    // Show success
+    if (intentEl.value === 'verified_shop') {
       successMsg.textContent = "We'll notify you the moment verified shops are live in your Orange County area. You'll know before your insurance company ever gets a chance to steer you.";
       successIntentTag.textContent = 'OC Shop Finder — Early Access';
     } else {
@@ -418,5 +430,3 @@
     this.value = this.value.replace(/\D/g, '').slice(0, 5);
   });
 </script>
-</body>
-</html>
