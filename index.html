@@ -370,6 +370,7 @@
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+
     const zip = document.getElementById('zipcode').value.trim();
     const email = document.getElementById('email').value.trim();
     const intentEl = document.querySelector('input[name="intent"]:checked');
@@ -380,48 +381,38 @@
       return;
     }
 
-    const intent = intentEl.value === 'verified_shop' ? 'Finding a verified LA shop' : 'Deductible protection';
-    const accident = accidentEl ? (accidentEl.value === 'yes' ? 'Yes' : 'No') : 'Not answered';
+    const intent = intentEl.value;
+    const accident = accidentEl ? accidentEl.value : 'not answered';
 
-    // Build Tally form URL with prefilled data
-    const tallyBase = 'https://tally.so/r/818WGl';
-    const params = new URLSearchParams({
-      'Zip Code': zip,
-      'Email': email,
-      'What are you most interested in': intent,
-      'Been in accident last 12 months': accident,
+    // Submit to Netlify Forms via fetch
+    const formData = new FormData();
+    formData.append('form-name', 'cahq-waitlist-los_angeles');
+    formData.append('zip', zip);
+    formData.append('email', email);
+    formData.append('intent', intent);
+    formData.append('accident', accident);
+    formData.append('market', 'los_angeles');
+    formData.append('source', document.referrer || 'direct');
+    formData.append('timestamp', new Date().toISOString());
+
+    fetch('/', {
+      method: 'POST',
+      body: formData
+    }).then(function() {
+      console.log('Netlify form submission success');
+    }).catch(function(err) {
+      console.log('Form error:', err);
     });
 
-    // Submit silently to Tally via hidden iframe
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = tallyBase + '?' + params.toString();
-    document.body.appendChild(iframe);
-    setTimeout(function() { document.body.removeChild(iframe); }, 5000);
-
-    // Also send as JSON to Tally API
-    fetch('https://tally.so/r/818WGl', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        'Zip Code': zip,
-        'Email': email,
-        'What are you most interested in': intent,
-        'Been in accident last 12 months': accident,
-        'market': 'los_angeles',
-        'source': document.referrer || 'direct',
-        'timestamp': new Date().toISOString()
-      })
-    }).catch(function(){});
-
-    // Show success
-    if (intentEl.value === 'verified_shop') {
-      successMsg.textContent = "We'll notify you the moment verified shops are live in your Los Angeles area. You'll know before your insurance company ever gets a chance to steer you.";
+    // Show success immediately
+    if (intent === 'verified_shop') {
+      successMsg.textContent = "We'll notify you the moment verified shops are live in your LA County area. You'll know before your insurance company ever gets a chance to steer you.";
       successIntentTag.textContent = 'LA County Shop Finder — Early Access';
     } else {
       successMsg.textContent = "You're first in line for the deductible product in LA County. We're building it so you never have to worry about coming up with that money when an accident happens.";
       successIntentTag.textContent = 'Deductible Product — First Access';
     }
+
     form.style.display = 'none';
     successState.style.display = 'block';
   });
