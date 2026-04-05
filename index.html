@@ -229,7 +229,7 @@
         <div class="form-hint" id="deductibleHint">We're building a financial product so Los Angeles County drivers never have to worry about coming up with their deductible out of pocket. You'll get first access when it launches.</div>
         <div class="field">
           <label class="field-label" for="zipcode">Your LA County zip code</label>
-          <input type="text" id="zipcode" name="zipcode" placeholder="e.g. 90250" maxlength="5" inputmode="numeric" required>
+          <input type="text" id="zipcode" name="zip" placeholder="e.g. 90250" maxlength="5" inputmode="numeric" required>
         </div>
         <div class="field">
           <label class="field-label" for="email">Your email</label>
@@ -241,6 +241,56 @@
             <label class="radio-option"><input type="radio" name="accident" value="yes"><span>Yes — I've dealt with this firsthand</span></label>
             <label class="radio-option"><input type="radio" name="accident" value="no"><span>No — I'm getting ahead of it</span></label>
           </div>
+        </div>
+        
+        <div class="field">
+          <label class="field-label" for="insurance">Your insurance company</label>
+          <select id="insurance" name="insurance" style="width:100%;background:var(--black);border:1px solid var(--gray-3);color:var(--white);font-family:var(--font-body);font-size:0.9rem;font-weight:300;padding:0.7rem 1rem;outline:none;border-radius:0;-webkit-appearance:none;transition:border-color 0.2s ease;">
+            <option value="" disabled selected style="color:var(--gray-3)">Select your insurer</option>
+            <option value="state_farm">State Farm</option>
+            <option value="geico">GEICO</option>
+            <option value="progressive">Progressive</option>
+            <option value="allstate">Allstate</option>
+            <option value="farmers">Farmers</option>
+            <option value="aaa">AAA</option>
+            <option value="usaa">USAA</option>
+            <option value="liberty_mutual">Liberty Mutual</option>
+            <option value="nationwide">Nationwide</option>
+            <option value="travelers">Travelers</option>
+            <option value="mercury">Mercury</option>
+            <option value="21st_century">21st Century</option>
+            <option value="bristol_west">Bristol West</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="vehicle">Vehicle manufacturer</label>
+          <select id="vehicle" name="vehicle" style="width:100%;background:var(--black);border:1px solid var(--gray-3);color:var(--white);font-family:var(--font-body);font-size:0.9rem;font-weight:300;padding:0.7rem 1rem;outline:none;border-radius:0;-webkit-appearance:none;transition:border-color 0.2s ease;">
+            <option value="" disabled selected style="color:var(--gray-3)">Select your vehicle brand</option>
+            <option value="tesla">Tesla</option>
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="ford">Ford</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes-Benz</option>
+            <option value="audi">Audi</option>
+            <option value="lexus">Lexus</option>
+            <option value="nissan">Nissan</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="kia">Kia</option>
+            <option value="subaru">Subaru</option>
+            <option value="jeep">Jeep</option>
+            <option value="ram">RAM</option>
+            <option value="gmc">GMC</option>
+            <option value="dodge">Dodge</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="volvo">Volvo</option>
+            <option value="porsche">Porsche</option>
+            <option value="rivian">Rivian</option>
+            <option value="lucid">Lucid</option>
+            <option value="other">Other</option>
+          </select>
         </div>
         <button type="submit" class="submit-btn" id="submitBtn">Notify Me When My LA County Area Is Live</button>
         <p class="form-disclaimer">No spam. No insurance company referrals. Ever.</p>
@@ -392,6 +442,8 @@
     formData.append('intent', intent);
     formData.append('accident', accident);
     formData.append('market', 'los_angeles');
+    formData.append('insurance', document.getElementById('insurance').value || 'not selected');
+    formData.append('vehicle', document.getElementById('vehicle').value || 'not selected');
     formData.append('source', document.referrer || 'direct');
     formData.append('timestamp', new Date().toISOString());
 
