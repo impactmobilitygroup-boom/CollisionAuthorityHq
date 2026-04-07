@@ -5,8 +5,10 @@
   <url><loc>https://www.collisionauthorityhq.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.collisionauthorityhq.com/orange-county</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
-  <!-- Tesla LA County -->
+  <!-- Tesla LA County — brand page -->
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/tesla</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Tesla LA County — city pages -->
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/tesla-santa-monica</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/tesla-manhattan-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/tesla-culver-city</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -19,8 +21,10 @@
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/tesla-torrance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/tesla-long-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Rivian LA County -->
+  <!-- Rivian LA County — brand page -->
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/rivian</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Rivian LA County — city pages -->
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/rivian-malibu</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/rivian-pacific-palisades</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/rivian-santa-monica</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -29,12 +33,28 @@
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/rivian-torrance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.collisionauthorityhq.com/los-angeles/rivian-long-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Tesla Orange County -->
+  <!-- Tesla Orange County — brand page -->
   <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-irvine</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Rivian Orange County -->
+  <!-- Tesla Orange County — city pages -->
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-irvine</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-newport-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-laguna-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-huntington-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-mission-viejo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-costa-mesa</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-dana-point</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/tesla-yorba-linda</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Rivian Orange County — brand page -->
   <url><loc>https://www.collisionauthorityhq.com/orange-county/rivian</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Rivian Orange County — city pages -->
   <url><loc>https://www.collisionauthorityhq.com/orange-county/rivian-irvine</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/rivian-laguna-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/rivian-newport-beach</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/rivian-dana-point</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/rivian-san-clemente</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.collisionauthorityhq.com/orange-county/rivian-mission-viejo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>
