@@ -208,7 +208,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.75re
       <a href="/" style="font-size:0.68rem;font-weight:600;padding:0.3rem 0.9rem;border-radius:100px;text-decoration:none;transition:all 0.2s;background:var(--navy);color:var(--white);" >LA County</a>
       <a href="/orange-county" style="font-size:0.68rem;font-weight:600;padding:0.3rem 0.9rem;border-radius:100px;text-decoration:none;transition:all 0.2s;color:var(--gray-400);" >Orange County</a>
     </div>
-    <a href="#form-section" class="nav-btn">Get Early Access</a>
+    <a href="#form-section" class="nav-btn">Verify My Repair Path</a>
   </div>
 </nav>
 
@@ -216,23 +216,23 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.75re
 <div class="hero">
   <div class="hero-inner">
     <div class="trust-pill"><div class="trust-pill-dot"></div><span>Consumer Advocacy Platform — Los Angeles County</span></div>
-    <h1>Your Insurance Company<br><em>Doesn't Want You</em><br>Finding This.</h1>
-    <p class="hero-sub">Insurance companies steer LA County drivers toward their preferred shops — ranked by cheapest and fastest, not quality or safety. We surface the verified shops they bury. Free, independent, and always on your side.</p>
+    <h1>Before You Call Insurance —<br><em>Verify Where Your Vehicle</em><br>Actually Needs to Go.</h1>
+    <p class="hero-sub">Insurance companies route you based on their network. We verify your vehicle's required repair path using manufacturer certification data — before they decide for you.<br><br><span style="font-size:0.82rem;color:var(--gray-400);font-weight:400;">Built on OEM certification standards, repair requirements, and real-world shop capability signals.</span></p>
     <div class="hook-pills">
       <div class="hook-pill">
         <div class="pill-icon blue">✓</div>
         <div>
-          <div class="pill-label">Shop directory — launching by region</div>
-          <div class="pill-title">Find a verified OEM certified shop in LA County before your insurance steers you away</div>
-          <div class="pill-desc">From Long Beach to the South Bay, Westside to the SGV — enter your zip and we'll notify you when verified shops are live near you.</div>
+          <div class="pill-label">Step 1 — Verify before you call</div>
+          <div class="pill-title">Verify your vehicle's required repair path — before your insurance locks you into theirs</div>
+          <div class="pill-desc">Most insurance-recommended shops are not manufacturer-certified for your vehicle. Know the correct repair path first — then involve your insurer.</div>
         </div>
       </div>
       <div class="hook-pill">
         <div class="pill-icon red">$</div>
         <div>
-          <div class="pill-label">Coming soon — financial product</div>
-          <div class="pill-title">Worried about a high deductible if an accident happens?</div>
-          <div class="pill-desc">We're building a financial product so LA County drivers never have to stress about coming up with their deductible. Sign up to be first in line.</div>
+          <div class="pill-label">Plan ahead — financial protection</div>
+          <div class="pill-title">Plan ahead — don't let your deductible decide how your car gets repaired</div>
+          <div class="pill-desc">When a deductible feels too high, drivers compromise. Wrong shop. Delayed repair. Out-of-pocket surprises. We're building a program so that number never influences your repair decision.</div>
         </div>
       </div>
     </div>
@@ -244,8 +244,8 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.75re
   <div class="form-section-inner">
     <div class="form-card">
       <div class="form-eyebrow">Free early access — Los Angeles County</div>
-      <div class="form-title">What Brings You Here?</div>
-      <p class="form-subtitle">Tell us what matters most. We'll notify you first for exactly what you need — by zip code, right here in LA County.</p>
+      <div class="form-title">Where Should Your Vehicle Actually Go?</div>
+      <p class="form-subtitle">Enter your vehicle and location. We verify which shops meet your manufacturer's repair requirements in your area — before your insurance company routes you elsewhere.</p>
 
       <div id="formContainer">
         <form id="waitlistForm" name="cahq-waitlist-los_angeles" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -253,11 +253,12 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.75re
           <input type="hidden" name="market" value="los_angeles">
           <p style="display:none"><input name="bot-field"></p>
 
+          <p style="font-size:0.75rem;color:var(--red);font-weight:600;margin-bottom:1rem;padding:0.6rem 0.9rem;background:#fff0f0;border-radius:8px;border-left:3px solid var(--red);">⚡ Takes 10 seconds. Could prevent a $2,000+ mistake.</p>
           <span class="intent-label">👇 Select one to get started — required</span>
           <div class="intent-grid">
             <label class="intent-opt">
               <input type="radio" name="intent" value="verified_shop" required>
-              <div class="intent-box"><div class="ibi">✓</div><div class="ibt">Finding a verified LA shop</div><div class="ibs">Before I need one</div></div>
+              <div class="intent-box"><div class="ibi">✓</div><div class="ibt">Find my required shop</div><div class="ibs">Before insurance decides</div></div>
             </label>
             <label class="intent-opt">
               <input type="radio" name="intent" value="deductible">
@@ -337,8 +338,8 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.75re
             </div>
           </div>
 
-          <button type="submit" class="submit-btn" id="submitBtn">Notify Me When My LA County Area Is Live</button>
-          <p class="form-note">No spam. No insurance company referrals. Ever.</p>
+          <button type="submit" class="submit-btn" id="submitBtn">Verify My Repair Path</button>
+          <p class="form-note">No spam. No insurance company referrals. Ever.<br><span style="font-size:0.6rem;color:var(--gray-400);">Based on OEM certification requirements and manufacturer-approved repair standards — not insurance metrics.</span></p>
         </form>
 
         <div class="success-state" id="successState">
@@ -352,8 +353,8 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.75re
 
       <div class="form-stats">
         <div class="stat"><div class="stat-num">0¢</div><div class="stat-label">Cost to join</div></div>
-        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Consumer side</div></div>
-        <div class="stat"><div class="stat-num">1st</div><div class="stat-label">In LA County</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Consumer-Aligned<br>(No Insurance Influence)</div></div>
+        <div class="stat"><div class="stat-num">1st</div><div class="stat-label">Verification Platform of Its Kind in LA &amp; OC</div></div>
       </div>
     </div>
   </div>
@@ -375,13 +376,14 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.75re
 <div class="expose-section">
   <div class="expose-inner">
     <div class="section-tag">What LA County drivers aren't being told</div>
-    <div class="section-title">The System Was Built<br>For Them. Not You.</div>
-    <p style="font-size:0.88rem;color:var(--gray-700);max-width:540px;line-height:1.75;font-weight:300;margin-top:0.5rem;">Insurance companies have spent decades conditioning LA County drivers to call them first and follow their shop recommendation without question.</p>
+    <div class="section-title">The System Was Built for Insurance —<br><em>Not for You.</em></div>
+    <p style="font-size:0.88rem;color:var(--gray-700);max-width:540px;line-height:1.75;font-weight:300;margin-top:0.5rem;">Most drivers in Los Angeles and Orange County don't realize how repair decisions are actually made — until it costs them. Insurance companies have spent decades conditioning drivers to call them first and follow their shop recommendation without question.</p>
     <div class="expose-grid">
       <div class="expose-card"><div class="card-num">01</div><div class="card-title">The Preferred Shop List</div><div class="card-body">Your insurer recommends shops enrolled in their Direct Repair Program (DRP). These shops agree to prioritize <strong>cheapest and fastest</strong> repairs — measured by severity and cycle time — not your vehicle's safety.</div></div>
       <div class="expose-card"><div class="card-num">02</div><div class="card-title">OEM Certified Shops Are Hidden</div><div class="card-body">Shops certified by your vehicle's manufacturer — OEM certified — follow manufacturer repair procedures. They exist across LA County. They're kept at the bottom of the preferred list on purpose.</div></div>
       <div class="expose-card"><div class="card-num">03</div><div class="card-title">The Out-of-Pocket Trap</div><div class="card-body">When a non-certified shop and your insurance disagree on repair procedures, <strong>you pay the difference</strong> — on top of your deductible. In LA County where repair costs run high, that gap hits hard.</div></div>
       <div class="expose-card"><div class="card-num">04</div><div class="card-title">The Gold Standard Exists</div><div class="card-body">A small number of shops inside every DRP network are also OEM certified — protecting you from getting caught in the middle. These are the LA County shops we surface. <strong>They exist. They're just buried.</strong></div></div>
+      <p style="font-size:0.84rem;color:var(--gray-700);max-width:580px;line-height:1.75;font-weight:400;margin-top:1.75rem;padding:1.1rem 1.4rem;background:var(--white);border:1.5px solid var(--border);border-radius:12px;">We surface the overlap — where certification and capability actually align — so you don't have to guess.</p>
     </div>
   </div>
 </div>
@@ -407,17 +409,39 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.75re
     <div class="section-title">Built for the Moment<br>Before You Need It</div>
     <div class="steps">
       <div class="step"><div class="step-num">01</div><div><h3>Join before your LA County area goes live</h3><p>Enter your zip code and email. We're verifying shops across LA County zip by zip. You'll be notified the moment verified shops are available near you — before you ever need one.</p></div></div>
-      <div class="step"><div class="step-num">02</div><div><h3>We surface what insurance buries</h3><p>CollisionAuthorityHQ ranks shops based on OEM certifications, reputation signals, and quality criteria — not cheapest and fastest. We show you the shops your insurance company would prefer you never find.</p></div></div>
+      <div class="step"><div class="step-num">02</div><div><h3>We surface what insurance systems deprioritize</h3><p>CollisionAuthorityHQ verifies shops using certification data, repair requirements, and quality signals — not cheapest and fastest. We identify what your manufacturer requires and match it to real-world shop capability in your area.</p></div></div>
       <div class="step"><div class="step-num">03</div><div><h3>Know the language before the accident</h3><p>We teach you what Direct Repair Program (DRP) means, why severity and cycle time matter, and what OEM certified protects — so when the moment comes on an LA County freeway, you cannot be steered.</p></div></div>
       <div class="step"><div class="step-num">04</div><div><h3>Your deductible problem, solved</h3><p>We're building the first consumer financial product designed so LA County drivers never have to stress about coming up with their deductible. Join the waitlist to be first in line.</p></div></div>
     </div>
   </div>
 </div>
 
+<!-- TESLA DEDUCTIBLE MODULE -->
+<div style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3.5rem 1.5rem;">
+  <div style="max-width:860px;margin:0 auto;">
+    <div style="display:inline-flex;align-items:center;gap:0.5rem;background:#fff0f0;border:1px solid #ffc5c5;border-radius:100px;padding:0.35rem 0.9rem;margin-bottom:1.25rem;">
+      <div style="width:7px;height:7px;border-radius:50%;background:#e31937;flex-shrink:0;"></div>
+      <span style="font-size:0.7rem;font-weight:700;color:#e31937;letter-spacing:0.08em;text-transform:uppercase;">Tesla Owners — Optional Program</span>
+    </div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:0.75rem;">Tesla Owners —<br>Optional Deductible Protection<br><span style="font-style:italic;color:var(--red);">LA &amp; Orange County</span></h2>
+    <p style="font-size:0.9rem;color:var(--gray-700);line-height:1.8;max-width:580px;font-weight:400;margin-bottom:1.5rem;">For Tesla repairs, higher deductibles can influence decision-making at the worst possible time. We're building a separate Tesla-focused protection program designed to reduce that pressure — without affecting where or how you repair your vehicle.</p>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.75rem;">
+      <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.84rem;color:var(--gray-700);font-weight:300;"><span style="color:#e31937;font-weight:700;flex-shrink:0;">→</span>Built specifically for Tesla repair scenarios in Southern California</li>
+      <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.84rem;color:var(--gray-700);font-weight:300;"><span style="color:#e31937;font-weight:700;flex-shrink:0;">→</span>Independent from insurance routing systems — does not affect your repair path verification</li>
+      <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.84rem;color:var(--gray-700);font-weight:300;"><span style="color:#e31937;font-weight:700;flex-shrink:0;">→</span>Optional enrollment — no commitment required at this stage</li>
+    </ul>
+    <div style="display:flex;flex-direction:column;gap:0.5rem;max-width:320px;">
+      <a href="#form-section" style="display:block;background:var(--navy);color:var(--white);font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:700;padding:0.9rem 1.75rem;text-decoration:none;border-radius:12px;text-align:center;transition:background 0.2s;" onmouseover="this.style.background='#e31937'" onmouseout="this.style.background='var(--navy)'">Join Tesla Waitlist</a>
+      <p style="font-size:0.65rem;color:var(--gray-400);text-align:center;">Standalone program. Limited rollout.</p>
+    </div>
+  </div>
+</div>
+
+
 <!-- CTA -->
 <div class="cta-section">
   <div class="cta-inner">
-    <h2>Still Reading? You're Already <span>Ahead.</span></h2>
+    <h2>Most Drivers Find This Out After an Accident.<br><span>You're Seeing It Before.</span></h2>
     <p>Most LA County drivers find out how this system works after an accident.<br>You found out before. Lock in your spot — it's free.</p>
     <a href="#form-section" class="cta-link">Get Early Access — Free</a>
   </div>
@@ -443,10 +467,10 @@ document.querySelectorAll('input[name="intent"]').forEach(function(r){
     deductibleHint.style.display='none';
     if(this.value==='verified_shop'){
       shopHint.style.display='block';
-      submitBtn.textContent='Notify Me When Verified LA County Shops Are Live';
+      submitBtn.textContent='Verify My Repair Path';
     }else{
       deductibleHint.style.display='block';
-      submitBtn.textContent='Get First Access to the Deductible Product';
+      submitBtn.textContent='Verify My Repair Path';
     }
   });
 });
