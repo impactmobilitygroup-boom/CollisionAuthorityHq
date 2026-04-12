@@ -124,7 +124,7 @@ footer{background:var(--white);border-top:1px solid var(--border);padding:1.5rem
   <a href="/" class="logo"><span>Collision<span>Authority</span>HQ</span><span class="logo-sub">Los Angeles County, California</span></a>
   <div class="nav-right">
     <div class="nav-mkt"><a href="/" class="active">LA County</a><a href="/orange-county">Orange County</a></div>
-    <a href="#cta-section" class="nav-btn">Verify My Repair Path</a>
+    <a href="#cta-section" class="nav-btn">Tesla Approved Body Shops</a>
   </div>
 </nav>
 
@@ -390,7 +390,7 @@ It walks you through exactly what to do, what actually matters for a Tesla repai
   <div class="guide-section" id="find-options">
     <h2>9. Find Tesla-Certified Repair Options Near You</h2>
     <p>Most drivers research this after an accident, when they're already under time and emotional pressure. The better position is knowing your options before you need them.</p>
-    <p>CollisionAuthorityHQ was built to help Los Angeles Tesla owners quickly identify certified repair options — without having to rely solely on what their insurance company recommends. The platform verifies certification status directly and surfaces shops that meet Tesla's manufacturer repair requirements in your specific area.</p>
+    <p>CollisionAuthorityHQ was built to help Los Angeles Tesla owners quickly identify Tesla Approved Collision Centers — without having to rely solely on what their insurance company recommends. The platform verifies certification status directly and surfaces shops that meet Tesla's manufacturer repair requirements in your specific area.</p>
     <div class="info-box"><p><strong>The most useful thing you can do right now:</strong> Enter your zip code below and see which Tesla-certified repair options are available near you. If you're reading this after an accident, this is your next step. If you're reading this ahead of time — even better.</p></div>
   </div>
 
@@ -399,13 +399,13 @@ It walks you through exactly what to do, what actually matters for a Tesla repai
 <!-- CTA -->
 <div class="cta-section" id="cta-section">
   <div class="cta-inner">
-    <h2>Find a Certified Tesla Repair Option<br><span>Near You — Before Insurance Decides</span></h2>
-    <p>Find a certified Tesla repair option near you before insurance directs you. Enter your zip code to see available options.</p>
+    <h2>Find a Tesla Approved Collision Center<br><span>Near You — Before Insurance Decides</span></h2>
+    <p>Find a Tesla Approved Collision Center near you before insurance directs you. Enter your zip code to see available options.</p>
     <p style="font-size:.75rem;color:rgba(255,255,255,.6);margin-bottom:.75rem;max-width:480px;margin-left:auto;margin-right:auto;text-align:center;">This tool is independent &#x2014; it does not route you through insurance networks or paid referrals.</p>
     <p style="font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.7;font-weight:300;max-width:520px;margin:0 auto 1.25rem;">If you're reading this after an accident, this decision is happening now — not later.</p>
     <div class="cta-form">
       <input type="text" id="cta-zip" placeholder="Your zip code" maxlength="5" inputmode="numeric">
-      <button onclick="handleCTA()">See Options</button>
+      <button onclick="handleCTA()">See Tesla Approved Shops</button>
     </div>
     <p class="cta-note">No spam. No insurance referrals. Free to use.</p>
   </div>
@@ -433,7 +433,7 @@ It walks you through exactly what to do, what actually matters for a Tesla repai
 <script>
 function handleCTA(){
   const zip=document.getElementById('cta-zip').value.trim();
-  if(zip.length===5){window.location.href='/?zip='+zip+'#form-section';}
+  if(zip.length===5){window.location.href='/los-angeles/tesla';}
   else{document.getElementById('cta-zip').focus();}
 }
 document.getElementById('cta-zip').addEventListener('keydown',function(e){if(e.key==='Enter')handleCTA();});
